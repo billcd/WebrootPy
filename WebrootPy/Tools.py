@@ -6,7 +6,7 @@ def get_webroot_config(path_to_file):
     import yaml
     with open(path_to_file, 'r') as stream:
         try:
-            return yaml.load(stream)
+            return yaml.load(stream, Loader=yaml.BaseLoader)
         except yaml.YAMLError as exc:
             print(exc)
 

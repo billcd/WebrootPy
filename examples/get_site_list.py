@@ -1,5 +1,5 @@
 from WebrootPy import WebrootPy, get_webroot_config
-
+from pprint import pprint
 
 wr = WebrootPy(get_webroot_config("credentials.yaml"))
 
@@ -7,4 +7,4 @@ wr = WebrootPy(get_webroot_config("credentials.yaml"))
 sites = wr.console_gsm_sites()
 for site in sites['Sites']:
     if not site.suspended and not site.deactivated:
-        print(site.site_name + " " + site.site_id)
+        print(site.site_name + " " + site.site_id + " ")
